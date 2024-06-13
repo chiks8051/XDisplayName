@@ -17,7 +17,7 @@ const DisplayName = () => {
         <label htmlFor="firstName">First Name: </label>
         <input
           type="text"
-          id="fistName"
+          id="firstName"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
           required
@@ -36,7 +36,7 @@ const DisplayName = () => {
           Submit
         </button>
       </form>
-      {submit && (
+      {submit && (firstName.trim() !== "" && lastName.trim() !== "") && (
         <div>
           <p>Full Name: {firstName} {lastName}</p>
         </div>
